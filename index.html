@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY1</title>
+</head>
+<body>
+    <h1>JS-Interview Preparation DAY1</h1>
+    <h4>1.Difference between “ == “ and “ === “ operators.</h4>
+    <p>* comparision operator</p>
+    <p>* == is used for comparison between two variables irrespective of the datatype of variable</p>
+    <p>The equality operator (==) checks whether its two operands are equal, returning a Boolean result.
+    it will ignore double " " and ' '</p>
+
+   <p>* === is used for comparision between two variables but this will check strict type, which means it will check datatype and compare two values.</p>
+    <p>The strict equality operator ( === ) checks whether its two operands are equal, returning a Boolean result</p>
+
+    <h4>2 What is the spread operator?</h4>
+    <p>Newest feature introduced in EA6 version 2015 spread operator used to expand the arrays that we are having</p>
+
+    <h4>4.What are the differences between var, let and const?</h4>
+    <p>var</p>
+    <p>Keyword used to declare the variable</p>
+    <p>we are using let and const most of the time</p>
+    <ul>
+        <li>we can declare the variable in one line and intialize it in another lin or in the same line</li>
+        <li>Two variables with the same name are possible with let</li>
+        <li>We can reassign/update the values of the variable which have already been initialized.</li>
+        <li>var is global scoped</li>
+        <li>var support hoisting</li>
+
+    </ul>
+    <p>let</p>
+    <ul>
+        <li>we  can declare the variable in one line and intialize in other line or in the same line</li>
+        <li>Two variables with the same name are not possible with let</li>
+        <li>We can reassign/update the values of the variable which have already been initialized.</li>
+        <li>let is block scoped</li>
+        <li>does not support hoisting</li>
+    </ul>
+    <p>const</p>
+    <ul>
+        <li>We have to declare the variable and intialize it in the same line itself</li>
+        <li>Two variable with same name are not possible</li>
+        <li>We can not reassign/update the values of the variable which have already been initialized.</li>
+        <li>const is block scoped</li>
+        <li>does not support hoisting</li>
+    </ul>
+     <p> undefined - when we try to access a variable that is declared but not initialized for var keywords.
+     </p>
+     <p> null - Its a value that we initialize to a variable which will later be replaced with some other/true value</p>
+    <p>not defined - when we try to access a variable that is not declared.</p>
+
+    <h4>5.What is execution context</h4>
+    <h4>6.What is creation phase and execution phase?</h4>
+    <p>Everything happens in javascript happens inside the execution context.whatever the lines of code writting inside javascript that all are happens inside execution context</p>
+    <p>Two component in execution context</p>
+    <ol>
+        <li>Memory component</li>
+        <p>memory component is inside creation phase</p>
+        <li>Code component</li>
+        <p>Code component inside execution phase</p>
+    </ol>
+    <pre>
+        var n = 3;
+       function cube(num){
+           var answer = num*num*num;
+           return answer;
+           }
+        var cube1 = cube(n);
+    </pre>
+    <p>when ever the piece of code written in the global scope ,then a global execution context is created and in that execution context in the first phase that is creation phase variable and function memory allocated to it. keyword var is getting undefined inside memory allocation .function is stored in that creation phase ,during the time of memory allocation in creation phase memory will allocate.After getting memory allocation it will move towards execution phase.In the execution phase code get started run. The javascript engine will encounter first line of code,before in creation phase n was getting undefined.During the execution phase first line of code executed that time undefined will replace with it real value. Function will be as it is during the time of execution var cube1=cube(n) is getting called and the function will return.Once code completed the global execution context created initially that will getting deleted.</p>
+    <h4>7.What is meant by first class functions</h4>
+    <p>It is called as first class citizen. It is having three four statement inside it</p>
+    <p>It mainy has three statement</p>
+    <li>function can assign to a variable</li>
+    <li>function can assign as arrgument to other function</li>
+    <li>function can return from another function</li>
+    <p>callback function can come inside first class function,but first class function can not come inside call back function</p>
+    <h4>8.What are closures? Give an example of closure</h4>
+    <p>Closure is combination of inner function and lexical environment of outer function and able to access the values of variables just because of closure</p>
+    <script src="./index.js"></script>
+    <h4></h4>
+</body>
+</html>
